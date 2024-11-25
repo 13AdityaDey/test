@@ -1,0 +1,235 @@
+/* *{
+    margin: 0;
+    padding:0;
+    background-color: black;
+}
+.navbar{
+    width: 1197.38px;
+    height: 80px;
+    margin-left: 121px;
+    margin-top: 98px;
+    padding: top 16px left 28px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+  
+}
+nav li{
+display: inline-block;
+margin-left: ;
+
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+    /* display: flex;
+    align-items: center; */
+}
+/* .navbar{
+    background-color: aqua;
+    height: 80px;
+    width: 1197.38px;   
+    margin-top: 6vh; 
+    margin-left: 10vw;
+    margin-right: 10vw;
+} */
+
+body{
+    /* background-image: url(/image/Frame\ 5.png); */
+    background-color: #272525;
+}
+/* ----------------------------------------------Navbar------------------------------------------------------ */
+.navbar{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: rgba(247, 243, 243, 0.267);
+    height: 80px;
+    width: 1197.38px;   
+    border-radius: 12px;
+    /* position: sticky; */
+    /* overflow: visible */
+    /* margin:8vh; */
+    /* margin-top: 6vh; 
+    margin-left: 10vw; */
+    /* margin-right: 40vw; */
+    /* padding: 16px 28px 16px 28px; */
+    /* opacity: 0.75; */
+
+    border: 2px solid;
+    /* border-image: linear-gradient(to right, red, blue, green, yellow) 1; */
+
+    /* border: 2px solid transparent;
+    background: linear-gradient(140deg, red,orange,yellow,green,indigo,blue) border-box;
+    /* -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); */
+    /* mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;   */ 
+    backdrop-filter: blur(10px);
+    
+}
+
+#nav-img{
+    height: 36px;
+    width: 335.37px;
+    margin-left:-3vw;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav li{
+    display: inline-block;   
+    list-style: none;
+ 
+}
+nav li a{
+    padding: 0.9rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: white;
+}
+nav li a:hover{
+    color: #4282F2;
+}
+nav button{
+    background-color: rgb(39,37,37,1) ;
+    height: 48px;
+    width: 115px;
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 24px 12px 24px;
+    opacity: 2;
+}
+nav button:active{
+    border-style: outset;
+}
+nav button a{
+    color: #FFFFFF;
+    height: 28px;
+    width: 67px;
+}
+
+.navBar{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* margin-top: 2.5rem; */
+    position: sticky;
+    top: 2.5rem;
+    z-index: 9999999999;
+}
+/* ----------------------------------------------Navbar------------------------------------------------------ */
+
+#logo1{
+    display:flex;
+    position: absolute;
+    /* position: sticky; */
+
+    top: 4.438rem;
+    left: 2.813rem;
+    z-index: -1;
+}
+#logo2{
+    display:flex;
+    position: absolute;
+    top: 26.438rem;
+    right: 4rem;
+    z-index: -1;
+}
+
+#logo3{
+    display: flex;
+    position:absolute;
+    top: 24.438rem;
+    left: 2.813rem;
+    z-index: -1;
+}
+#logo4{
+    display:flex;
+    position: absolute;
+    top: 19.438rem;
+    right: 1rem;
+    z-index: -2;
+}
+#logo5{
+    display:flex;
+    width: 96.875rem;
+    /* justify-content: center;
+    align-items: center; */
+    position: absolute;
+    top: -14.438rem;
+    z-index: -5;
+
+}
+
+.main-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position:absolute;
+    top:190px;
+    left: 50%; */
+    position: relative;
+    top:5rem;
+    color: #FFFFFF;
+    font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    font-style: normal;
+    font-size: 25px;
+}
+.main-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:5.25rem;
+    left: -7.188rem;
+    color: #FFFFFF;
+    font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    font-style: large;
+    font-size: 25px;
+}
+.hero-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:3.125rem;
+}
+#btn1{
+    height: 3.75rem;
+    width: 12.625rem;
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    font-style: large;
+    font-size: 25px;
+    margin-right: 1.25rem;
+}
+#btn2{
+    height: 3.75rem;
+    width: 15.75rem;
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    font-style: large;
+    font-size: 25px;
+    background-color: rgba(247, 243, 243, 0.267);
+    color: #FFFFFF;
+}
+
+
+
+
+
