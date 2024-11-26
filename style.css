@@ -195,8 +195,8 @@ nav button a{
     top:5.25rem;
     left: -7.188rem;
     color: #FFFFFF;
-    font-family: 'Product Sans Regular';
-    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    font-family: 'ProductSans-Light';
+    src: url(/fonts/ProductSans-Light.ttf);
     font-style: large;
     font-size: 25px;
 }
