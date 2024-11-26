@@ -233,5 +233,148 @@ nav button a{
 
 /* ----------------------------------------------Hero Section------------------------------------------------------ */
 
+/* ----------------------------------------------Number Section------------------------------------------------------ */
+.number{
+    padding-top: 25rem;
+    display:flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap:9rem;
+
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.num{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#FFFFFF;
+    font-size: 30px;
+    /* font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf); */
+}
+.text{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#FFFFFF;
+    font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    
+}
+/* ----------------------------------------------Number Section------------------------------------------------------ */
+
+/* ----------------------------------------------Ongoing Section------------------------------------------------------ */
+.ongoing-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:5rem;
+    color:#FFFFFF;
+    padding-top: 10rem;
+}
+.ongoing-content{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15rem;
+}
+.ongoing-text{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: column;
+    font-size: xx-large;
+    gap:2rem;
+}
+.ongoing-image{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 378px;
+    height: 378px; */
+    
+
+}
+.ongoing-image img{
+    width: 450px;
+    height: 450px;
+    border-radius: 300px;
+}
+#btn3{
+    height: 3.75rem;
+    width: 12.625rem;
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    font-family: 'Product Sans Regular';
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+    font-style: large;
+    font-size: 25px;
+    margin-right: 1.25rem;
+}
+.ongoing-container h1{
+    font-size: 2.5rem;
+}
+/* ----------------------------------------------Ongoing Section------------------------------------------------------ */
+
+/* ----------------------------------------------About Section------------------------------------------------------ */
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5rem;
+    padding-top: 7rem;
+}
+.about-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-text{
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex-direction: column;
+    color: #FFFFFF;
+    gap:1rem
+
+}
+/* .about-image img{
+    width: 350px;
+    height: 300px;
+} */
+.about-heading h1{
+    font-size: 2.5rem;
+}
+.about-content{
+    font-size: 1.5rem;
+}
+/* ----------------------------------------------About Section------------------------------------------------------ */
+
+/* ----------------------------------------------GDGC Section------------------------------------------------------ */
+.GDGC-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 7rem;
+    gap:1.5rem;
+}
+.flexbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-img{
+    gap:1rem;
+}
+/* ----------------------------------------------GDGC Section------------------------------------------------------ */
+
+
 
 
