@@ -43,15 +43,26 @@ body{
     /* background-image: url(/image/Frame\ 5.png); */
     background-color: #272525;
 }
+button:hover{
+    cursor: pointer;
+}
 /* ----------------------------------------------Navbar------------------------------------------------------ */
 .navbar{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    background-color: rgba(247, 243, 243, 0.267);
+    background-color: rgba(75, 74, 74, 0.619);
     height: 80px;
     width: 1197.38px;   
     border-radius: 12px;
+    position: relative;
+    top:5rem;
+
+
+    background-clip: padding-box;
+    border: solid 1.5px white;
+    backdrop-filter: blur(10px);
+    /* ------------------------------------------------------------ */
     /* position: sticky; */
     /* overflow: visible */
     /* margin:8vh; */
@@ -61,18 +72,37 @@ body{
     /* padding: 16px 28px 16px 28px; */
     /* opacity: 0.75; */
 
-    border: 2px solid;
+    /* border: 1.5px solid; */
     /* border-image: linear-gradient(to right, red, blue, green, yellow) 1; */
 
-    /* border: 2px solid transparent;
+     /* border: 2px solid transparent;
     background: linear-gradient(140deg, red,orange,yellow,green,indigo,blue) border-box;
-    /* -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); */
-    /* mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;   */ 
-    backdrop-filter: blur(10px);
-    
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); */
+    /* -webkit-mask-composite: destination-out; */
+    /* mask-composite: exclude;   */
+    /* -webkit-background-clip:initial;   */
+
+    /* --------------------------------------------------------------------------- */
+    /* display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    max-width: 22em;
+    position: relative;
+    padding: 30% 2em;
+    box-sizing: border-box;
+    color: #13e533;
+    background: #000;
+    background-clip: padding-box;
+    /* !importanté */
+    /* border: solid 5px transparent; */
+    /* !importanté */
+    /* border-radius: 1em;  */
+
 }
+
+
 
 #nav-img{
     height: 36px;
@@ -95,12 +125,13 @@ nav li a{
     text-decoration: none;
     font-size: 1.1rem;
     color: white;
+    /* z-index: 9999; */
 }
 nav li a:hover{
     color: #4282F2;
 }
 nav button{
-    background-color: rgb(39,37,37,1) ;
+    background-color: rgb(39, 37, 37) ;
     height: 48px;
     width: 115px;
     border: 0;
@@ -130,19 +161,23 @@ nav button a{
 
 /* ----------------------------------------------Hero Section------------------------------------------------------ */
 
+.hero-container{
+    position: relative;
+    top:5rem;
+}
 #logo1{
     display:flex;
     position: absolute;
     /* position: sticky; */
 
-    top: 4.438rem;
+    top: -1rem;
     left: 2.813rem;
     z-index: -1;
 }
 #logo2{
     display:flex;
     position: absolute;
-    top: 26.438rem;
+    top: 21.438rem;
     right: 4rem;
     z-index: -1;
 }
@@ -150,14 +185,14 @@ nav button a{
 #logo3{
     display: flex;
     position:absolute;
-    top: 24.438rem;
-    left: 2.813rem;
+    top: 19.438rem;
+    left: 4.8rem;
     z-index: -1;
 }
 #logo4{
     display:flex;
     position: absolute;
-    top: 19.438rem;
+    top: 15.438rem;
     right: 1rem;
     z-index: -2;
 }
@@ -172,6 +207,10 @@ nav button a{
 
 }
 
+.main{
+    position: relative;
+    top: 5rem;
+}
 .main-1{
     display: flex;
     justify-content: center;
@@ -185,7 +224,7 @@ nav button a{
     font-family: 'Product Sans Regular';
     src: url(/fonts/Product\ Sans\ Regular.ttf);
     font-style: normal;
-    font-size: 25px;
+    font-size: 40px;
 }
 .main-2{
     display: flex;
@@ -217,30 +256,35 @@ nav button a{
     font-style: large;
     font-size: 25px;
     margin-right: 1.25rem;
+    cursor: pointer;
 }
 #btn2{
     height: 3.75rem;
     width: 15.75rem;
     padding: 12px 24px 12px 24px;
     border-radius: 12px;
+    border-color: #FFFFFF;
     font-family: 'Product Sans Regular';
     src: url(/fonts/Product\ Sans\ Regular.ttf);
     font-style: large;
     font-size: 25px;
     background-color: rgba(247, 243, 243, 0.267);
     color: #FFFFFF;
+    cursor: pointer;
+
 }
 
 /* ----------------------------------------------Hero Section------------------------------------------------------ */
 
 /* ----------------------------------------------Number Section------------------------------------------------------ */
 .number{
-    padding-top: 25rem;
+    /* padding-top: 25rem; */
     display:flex;
     /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     position: relative;
+    top:28rem;
     gap:9rem;
 
 }
@@ -276,7 +320,9 @@ nav button a{
     flex-direction: column;
     gap:5rem;
     color:#FFFFFF;
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
+    position: relative;
+    top:35rem;
 }
 .ongoing-content{
     display:flex;
@@ -318,7 +364,12 @@ nav button a{
     margin-right: 1.25rem;
 }
 .ongoing-container h1{
-    font-size: 2.5rem;
+    font-size: 3.0rem;
+    /* height:750px;
+    width: 435px; */
+}
+.ongoing-text h2{
+    font-weight:100;
 }
 /* ----------------------------------------------Ongoing Section------------------------------------------------------ */
 
@@ -328,7 +379,9 @@ nav button a{
     align-items: center;
     justify-content: center;
     gap:5rem;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
+    position: relative;
+    top:40rem;
 }
 .about-image{
     display: flex;
@@ -362,7 +415,9 @@ nav button a{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
+    position: relative;
+    top:45rem;
     gap:1.5rem;
 }
 .flexbox{
