@@ -3,6 +3,7 @@ const swiper = document.querySelector(".swiper");
 const swipes = document.querySelectorAll(".swipe");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
+const eachFaqs = document.querySelectorAll(".each-faq");
 
 let currentswipe = 0;
 
@@ -80,3 +81,26 @@ pastEventsNextBtn.addEventListener("click", () => {
 renderEvents();
 updateCarousel();
 // ----------------Past Events Section----------------
+
+
+
+
+
+
+
+
+
+
+// ------------------------------FAQ Section---------------------
+eachFaqs.forEach(eachFaq => {
+  eachFaq.addEventListener('click', () => {
+    const answer = eachFaq.querySelector('.answer');
+    const icon = eachFaq.querySelector('.question img');
+    answer.classList.toggle('active');
+    icon.src = answer.classList.contains('active') 
+      ? "https://img.icons8.com/android/24/228BE6/minus.png" 
+      : "https://img.icons8.com/fluency-systems-filled/50/228BE6/plus-math.png";
+  })
+})
+
+
