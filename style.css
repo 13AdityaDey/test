@@ -29,6 +29,7 @@ margin-left: ;
   /* background-color: black; */
   /* display: flex;
     align-items: center; */
+    font-family: gdgc;
 }
 /* .navbar{
     background-color: aqua;
@@ -42,6 +43,10 @@ margin-left: ;
 body {
   /* background-image: url(/image/Frame\ 5.png); */
   background-color: #272525;
+}
+@font-face {
+  font-family: gdgc font;
+  src: url(/fonts/Product\ Sans\ Regular.ttf);
 }
 button:hover {
   cursor: pointer;
@@ -219,7 +224,7 @@ nav button a {
   top: 5rem;
   color: #ffffff;
   font-family: "Product Sans Regular";
-  src: url(/fonts/Product\ Sans\ Regular.ttf);
+  /* src: url(/fonts/Product\ Sans\ Regular.ttf); */
   font-style: normal;
   font-size: 40px;
 }
@@ -301,8 +306,6 @@ nav button a {
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-family: "Product Sans Regular";
-  src: url(/fonts/Product\ Sans\ Regular.ttf);
 }
 /* ----------------------------------------------Number Section------------------------------------------------------ */
 
@@ -349,8 +352,6 @@ nav button a {
   width: 12.625rem;
   padding: 12px 24px 12px 24px;
   border-radius: 12px;
-  font-family: "Product Sans Regular";
-  src: url(/fonts/Product\ Sans\ Regular.ttf);
   font-style: large;
   font-size: 25px;
   margin-right: 1.25rem;
