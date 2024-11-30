@@ -635,3 +635,83 @@ nav button a {
 }
 
 /* -------------------------------------------------Past Events Section------------------------------- */
+
+
+
+
+/* ----------------------------------------------------FAQ Section-------------------------------------------------- */
+
+.faq {
+  color: #fff;
+  display: flex;
+  gap: 1rem;
+  margin: auto;
+  align-items: center;
+  padding: 1rem 4rem;
+  max-width: 100%;
+}
+
+.faq-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 40%;
+}
+.faq-left-top {
+  font-size: 72px;
+}
+.faq-left-bottom {
+  font-size: 36px;
+}
+
+.faq-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 30px;
+  background-color: rgb(25, 20, 20);
+}
+
+.faq-right .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.faq-right .question img {
+  width: 32px;
+  height: 32px;
+}
+
+.faq-right .answer {
+  font-size: 22px;
+  margin-top: 1rem;
+  padding-right: 4rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+
+.faq-right .answer.active {
+  max-height: 300px;
+}
+
+.each-faq:not(:last-child) {
+  border-bottom: 1px solid #fff; 
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+@media (max-width: 900px) {
+  .faq{
+    flex-direction: column;
+  }
+  .faq-left{
+    margin-bottom: 3rem;
+  }
+}
