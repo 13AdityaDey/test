@@ -714,18 +714,25 @@ nav button a {
 /* -----------------------footer-------------------- */
 
 .footer {
-  background-color: rgb(25, 20, 20);
-  height: 350px;
+  background-color: rgb(30, 30, 30);
+  /* height: 350px; */
   max-width: 100%;
-  margin: 10rem 2rem;
+  margin: 10rem 2rem 10px 2rem;
   padding: 3rem;
   border-radius: 30px;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-end;
+  /* align-items: flex-end; */
   color: white;
-  /* position: relative;
-  top:90rem; */
+  position: relative;
+  height: 384px;
+  /* width: 97%;
+  background-color: rgb(30, 30, 30);
+  border-radius: 20px;
+  margin: 150px auto 25px auto;
+  display: flex;
+  justify-content: space-between; */
+  align-items: end;
 }
 
 
@@ -735,6 +742,14 @@ nav button a {
   font-size: 30px;
   position: relative;
   left: -140px;
+  /* width: 350px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  gap: 15px; */
+
 }
 .social-media a {
   color: #fff;
@@ -748,6 +763,17 @@ nav button a {
   cursor: pointer;
   text-decoration: none;
   padding: 1rem;
+  /* background-color: black;
+  color: white;
+  height: 60px;
+  width: 60px;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50%; */
+
 }
 .footer-gdgc {
   display: flex;
@@ -760,6 +786,6 @@ nav button a {
 
 }
 .footer-gdgc h3{
-  font-size: 1.5rem;
+  font-size: 1rem;
 
 }
