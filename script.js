@@ -103,4 +103,33 @@ eachFaqs.forEach(eachFaq => {
   })
 })
 
+function loadLoadingScreen() {
+  fetch('loading.html')
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('loading-placeholder').innerHTML = data;
+          // Add the loading screen styles
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'loading.css';
+          document.head.appendChild(link);
+      })
+      .catch(error => console.error('Error loading loading screen:', error));
+}
+
+// Show main content and hide the loading screen after loading
+window.onload = function () {
+  // Load the loading screen
+  loadLoadingScreen();
+
+  // Simulate loading delay (optional)
+  setTimeout(() => {
+      // Hide the loading screen
+      document.getElementById('loading-placeholder').style.display = 'none';
+
+      // Show the main content
+      document.getElementById('main-content').style.display = 'block';
+  }, 2000); // Adjust the delay as needed
+};
+
 

@@ -28,6 +28,12 @@ body {
 button:hover {
   cursor: pointer;
 }
+#main-content{
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ----------------------------------------------Navbar------------------------------------------------------ */
 .navbar {
   display: flex;
