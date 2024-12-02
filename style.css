@@ -657,8 +657,8 @@ nav button a {
 }
 
 .past-events button {
-  background-color: rgb(255 255 255);
-  color: #262020;
+  background-color: #333;
+  color: blue;
   border: none;
   padding: 11px 23px;
   cursor: pointer;
