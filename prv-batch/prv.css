@@ -3,7 +3,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", sans-serif;
+    /* font-family: "Montserrat", sans-serif; */
     scroll-behavior: smooth;
 }
 
@@ -14,7 +14,14 @@
 body{
     min-height: 100vh;
     background-color: var(--body-color);
+    font-family: gdgc font;
 }
+@font-face {
+    font-family: gdgc font;
+    src: url(/fonts/Product\ Sans\ Regular.ttf);
+  }
+  
+
 
 .header{
     position: sticky;
