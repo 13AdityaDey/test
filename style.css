@@ -1,13 +1,9 @@
-
-
 * {
   margin: 0;
   padding: 0;
-  /* background-color: black; */
-  /* display: flex;
-    align-items: center; */
-    font-family: gdgc;
+  font-family: gdgc;
 }
+
 /* .navbar{
     background-color: aqua;
     height: 80px;
@@ -17,14 +13,33 @@
     margin-right: 10vw;
 } */
 
+:root {
+  --bg-color: rgb(38, 37, 39);
+  --txt-color: rgb(255, 255, 255);
+  --navBg: rgba(75, 74, 74, 0.6);
+  --secondaryBg: rgb(38, 37, 39);
+  --footerBg: rgb(25, 20, 20);
+}
+
+.lightMode {
+  --bg-color: rgb(255, 255, 255);
+  --txt-color: rgb(39, 37, 37);
+  --navBg: rgb(255, 255, 255);
+  --secondaryBg: rgb(232, 232, 232);
+  --footerBg: rgb(232, 232, 232);
+}
+
 body {
   /* background-image: url(/image/Frame\ 5.png); */
-  background-color: #272525;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
 }
+
 @font-face {
   font-family: gdgc font;
   src: url(/fonts/Product\ Sans\ Regular.ttf);
 }
+
 button:hover {
   cursor: pointer;
 }
@@ -39,8 +54,7 @@ button:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-
+  border: solid 1.5px var(--txt-color);
   height: 60px;
   width: 80%;
   /* width: 1100px;
@@ -102,14 +116,15 @@ nav li a {
   padding: 0.9rem;
   text-decoration: none;
   font-size: 1.1rem;
-  color: white;
+  color: black;
+  text-decoration: none;
   /* z-index: 9999; */
 }
 nav li a:hover {
   color: #4282f2;
 }
 nav button {
-  background-color: rgb(39, 37, 37);
+  background-color: var(--secondaryBg);
   height: 48px;
   width: 115px;
   border: 0;
@@ -121,7 +136,7 @@ nav button:active {
   border-style: outset;
 }
 nav button a {
-  color: #ffffff;
+  color:var(--txt-color);
   height: 28px;
   width: 67px;
 }
@@ -199,7 +214,7 @@ nav button a {
     left: 50%; */
   position: relative;
   top: 5rem;
-  color: #ffffff;
+  color: var(--txt-color);
   font-family: "Product Sans Regular";
   /* src: url(/fonts/Product\ Sans\ Regular.ttf); */
   font-style: normal;
@@ -229,7 +244,7 @@ nav button a {
     width: 100%;
   position: relative;
   top: 5rem;
-  color: #ffffff;
+  color: var(--txt-color);
   /* src: url(/fonts/Product\ Sans\ Regular.ttf); */
   font-style: normal;
   font-size: 25px;
@@ -247,6 +262,7 @@ nav button a {
   width: 12.625rem;
   padding: 12px 24px 12px 24px;
   border-radius: 12px;
+  border-color:var(--txt-color);
   font-family: "Product Sans Regular";
   src: url(/fonts/Product\ Sans\ Regular.ttf);
   font-style: large;
@@ -259,17 +275,88 @@ nav button a {
   width: 15.75rem;
   padding: 12px 24px 12px 24px;
   border-radius: 12px;
-  border-color: #ffffff;
+  border-color:var(--txt-color);
   font-family: "Product Sans Regular";
   src: url(/fonts/Product\ Sans\ Regular.ttf);
   font-style: large;
   font-size: 25px;
   background-color: rgba(247, 243, 243, 0.267);
-  color: #ffffff;
+  color: var(--txt-color);
   cursor: pointer;
 }
 
 /* ----------------------------------------------Hero Section------------------------------------------------------ */
+/* ---------------------------------toggle button---------------------------------- */
+.toggle-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  width: 65px;
+  margin-left: 0.4rem;
+  margin-right: 0.1rem;
+}
+
+.toggle-btn {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+.toggle {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 90%;
+  background-color: var(--bg-color);
+  border-radius: 2em;
+  transition: all 0.25s linear;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  top: -0.2rem;
+  left: -0.2rem;
+  background-image: linear-gradient(-70deg, #4282F2,
+      #efc348,
+      #E84336,
+      #36e465);
+  border-radius: 2em;
+  z-index: -10;
+}
+
+.toggle::before {
+  content: "";
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  top: -14%;
+  left: -5%;
+  background-color: var(--bg-color);
+  border: 3px solid var(--txt-color);
+  transition: all 0.2s linear;
+}
+
+input[type="checkbox"]:checked~.toggle-btn .toggle::before {
+  transform: translateX(2.15rem);
+}
+
+.mode-icon {
+  display: none;
+}
+
+/* ---------------------------------toggle button---------------------------------- */
 
 /* ----------------------------------------------Number Section------------------------------------------------------ */
 .number {
@@ -290,7 +377,7 @@ nav button a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--txt-color);
   font-size: 30px;
   /* font-family: 'Product Sans Regular';
     src: url(/fonts/Product\ Sans\ Regular.ttf); */
@@ -299,7 +386,7 @@ nav button a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: var(--txt-color);
 }
 /* ----------------------------------------------Number Section------------------------------------------------------ */
 
@@ -310,7 +397,7 @@ nav button a {
   justify-content: center;
   flex-direction: column;
   gap: 5rem;
-  color: #ffffff;
+  color: var(--txt-color);
   /* padding-top: 10rem; */
   position: relative;
   top: 35rem;
@@ -384,7 +471,7 @@ nav button a {
   /* align-items: center;
     justify-content: center; */
   flex-direction: column;
-  color: #ffffff;
+  color: var(--txt-color);
   gap: 1rem;
 }
 /* .about-image img{
@@ -413,7 +500,7 @@ nav button a {
   position: relative;
   top: 45rem;
   gap: 1.5rem;
-  color:#ffffff;
+  color: var(--txt-color);
 }
 .Up{
   display: flex;
@@ -476,7 +563,7 @@ nav button a {
   gap: 50px;
   margin: auto;
   height: 100vh;
-  color: white;
+  color: var(--txt-color);
   position: relative;
   top: 60rem;
 }
@@ -493,7 +580,7 @@ nav button a {
 
 .blog-header p {
   font-size: 2.5rem;
-  color: #ccc;
+  color: var(--txt-color);
 }
 
 .swiper-wrapper {
@@ -503,6 +590,7 @@ nav button a {
 
 .swiper {
   display: flex;
+
   transition: transform 0.3s ease-in-out;
 }
 
@@ -514,7 +602,7 @@ nav button a {
 }
 
 .blog-card {
-  background-color: #242424;
+  background-color: var(--footerBg);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -526,17 +614,21 @@ nav button a {
 .blog-card h3 {
   font-size: 1.5rem;
   margin: 0 0 10px;
+  color: var(--txt-color);
+
 }
 
 .blog-card p {
   font-size: 1rem;
-  color: #ccc;
+  color: var(--txt-color);
 }
 
 .author {
   display: flex;
   align-items: center;
   margin-top: 10px;
+  color: var(--txt-color);
+
 }
 
 .author img {
@@ -580,8 +672,8 @@ nav button a {
 }
 
 .swiper-controls button {
-  background-color: #333;
-  color: white;
+  color: var(--txt-color);
+  background-color: var(--footerBg);
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -599,7 +691,7 @@ nav button a {
 /* -------------------------------------------------Past Events Section------------------------------- */
 
 .past-events {
-  color: #fff;
+  color: var(--txt-color);
   text-align: center;
   padding: 50px 20px;
   position: relative;
@@ -657,8 +749,8 @@ nav button a {
 }
 
 .past-events button {
-  background-color: #333;
-  color: blue;
+  background-color: var(--secondaryBg);
+  color: var(--txt-color);
   border: none;
   padding: 11px 23px;
   cursor: pointer;
@@ -669,7 +761,9 @@ nav button a {
 }
 
 .past-events button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--secondaryBg);
+  opacity: 0.6;
+
 }
 
 /* -------------------------------------------------Past Events Section------------------------------- */
@@ -680,7 +774,7 @@ nav button a {
 /* ----------------------------------------------------FAQ Section-------------------------------------------------- */
 
 .faq {
-  color: #fff;
+  color:var(--txt-color);
   display: flex;
   gap: 1rem;
   margin-top: 1100px;
@@ -711,7 +805,7 @@ nav button a {
   width: 60%;
   padding: 2rem;
   border-radius: 30px;
-  background-color: rgb(25, 20, 20);
+  background-color: var(--footerBg);
 }
 
 .faq-right .question {
@@ -763,7 +857,7 @@ nav button a {
 /* -----------------------footer-------------------- */
 
 .footer {
-  background-color: rgb(30, 30, 30);
+  background-color: var( --footerBg);
   /* height: 350px; */
   max-width: 100%;
   margin: 10rem 2rem 10px 2rem;
@@ -782,6 +876,8 @@ nav button a {
   display: flex;
   justify-content: space-between; */
   align-items: end;
+  color: var(--txt-color);
+
 }
 
 
@@ -801,9 +897,10 @@ nav button a {
 
 }
 .social-media a {
-  color: #fff;
+  background-color: var(--bg-color);
+  color: var(--txt-color);
   border-radius: 50%;
-  background-color: black;
+  background-color: var(--footerBg);
   width: 30px;
   height: 30px;
   display: flex;

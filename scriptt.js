@@ -85,3 +85,24 @@ sliders.forEach((slider) => {
     document.addEventListener("mouseup", dragStop);
     carousel.addEventListener("scroll", infiniteScroll);
 });
+// ----------------------Toggle Button-----------------------
+let lightMode = localStorage.getItem('lightMode');
+const modeSwitch = document.querySelector('.mode-icon');
+
+const enableLightmode = () => {
+    document.body.classList.add('lightMode');
+    localStorage.setItem('lightMode','active');
+};
+
+const disableLightmode = () => {
+    document.body.classList.remove('lightMode');
+    localStorage.removeItem('lightMode');
+};
+
+if(lightMode === "active") enableLightmode();
+
+modeSwitch.addEventListener("click", () => {
+    lightMode = localStorage.getItem('lightMode');
+    lightMode !== "active" ? enableLightmode() : disableLightmode();
+});
+// ----------------------Toggle Button-----------------------
