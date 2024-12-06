@@ -1,3 +1,26 @@
+// NAVIGATION BAR //
+const menubar = document.querySelector('#menubar');
+const sidebar = document.querySelector('.sidebar');
+const closeIcon = sidebar.querySelector('#closeBtn');
+
+menubar.addEventListener('click', () => {
+    sidebar.style.display = 'flex';
+});
+
+closeIcon.addEventListener('click', () => {
+    sidebar.style.display = 'none';
+});
+
+const navLinks = document.querySelectorAll('nav li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        navLinks.forEach(nav => nav.classList.remove('active')); 
+        this.classList.add('active'); 
+    });
+});
+
+
 // ----------------Blogs Section----------------
 const swiper = document.querySelector(".swiper");
 const swipes = document.querySelectorAll(".swipe");
@@ -89,19 +112,73 @@ function changeImg(){
 
 
 // ----------------Past Events Section----------------
+// const events = [
+//   { date: "12 Nov, 2024", title: "Gen AI Study Jam", image: "image/event-image.png" },
+//   { date: "13 Nov, 2024", title: "AI Conference", image: "image/event-image.png" },
+//   { date: "14 Nov, 2024", title: "Tech Meetup", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+//   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+// ];
+
+// const carouselInner = document.querySelector(".carousel-inner");
+// const pastEventsPrevBtn = document.querySelector(".past-events-prev-btn");
+// const pastEventsNextBtn = document.querySelector(".past-events-next-btn");
+
+// let offset = 0;
+
+// function renderEvents() {
+//   carouselInner.innerHTML = "";
+//   events.forEach((event) => {
+//     const eventDiv = document.createElement("div");
+//     eventDiv.classList.add("event");
+//     eventDiv.innerHTML = `
+//       <img src="${event.image}" alt="${event.title}">
+//       <p>${event.date}</p>
+//       <h3>${event.title}</h3>
+//     `;
+//     carouselInner.appendChild(eventDiv);
+//   });
+// }
+
+// function updateCarousel() {
+//   carouselInner.style.transform = `translateX(${offset}%)`;
+// }
+
+// pastEventsPrevBtn.addEventListener("click", () => {
+//   offset += 25;
+//   if (offset > 0) {
+//     offset = -(events.length - 1) * 25; // Loop back to the last slide
+//   }
+//   updateCarousel();
+// });
+
+// pastEventsNextBtn.addEventListener("click", () => {
+//   offset -= 25;
+//   if (offset < -(events.length - 1) * 25) {
+//     offset = 0; // Loop back to the first slide
+//   }
+//   updateCarousel();
+// });
+
+// renderEvents();
+// updateCarousel();
+
 const events = [
   { date: "12 Nov, 2024", title: "Gen AI Study Jam", image: "image/event-image.png" },
   { date: "13 Nov, 2024", title: "AI Conference", image: "image/event-image.png" },
   { date: "14 Nov, 2024", title: "Tech Meetup", image: "image/event-image.png" },
   { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
-  { date: "15 Nov, 2024", title: "Developer Summit", image: "image/event-image.png" },
+  { date: "16 Nov, 2024", title: "Innovation Fest", image: "image/event-image.png" },
+  { date: "17 Nov, 2024", title: "Coding Bootcamp", image: "image/event-image.png" },
+  { date: "18 Nov, 2024", title: "Hackathon Finale", image: "image/event-image.png" },
+  { date: "19 Nov, 2024", title: "AI Workshop", image: "image/event-image.png" },
 ];
 
 const carouselInner = document.querySelector(".carousel-inner");
@@ -110,8 +187,17 @@ const pastEventsNextBtn = document.querySelector(".past-events-next-btn");
 
 let offset = 0;
 
+// Get the number of visible slides based on screen size
+function getVisibleSlides() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth <= 450) return 1; // Full-width slides on small screens
+  if (screenWidth <= 780) return 2; // Half-width slides on medium screens
+  return 4; // Default to 4 slides on larger screens
+}
+
+// Render the events inside the carousel
 function renderEvents() {
-  carouselInner.innerHTML = "";
+  carouselInner.innerHTML = ""; // Clear existing content
   events.forEach((event) => {
     const eventDiv = document.createElement("div");
     eventDiv.classList.add("event");
@@ -124,28 +210,52 @@ function renderEvents() {
   });
 }
 
+// Update the carousel's transform and adjust slide widths
 function updateCarousel() {
+  const visibleSlides = getVisibleSlides();
+  const slideWidth = 100 / visibleSlides; // Calculate slide width as percentage
+
   carouselInner.style.transform = `translateX(${offset}%)`;
+
+  // Adjust slide widths dynamically
+  const allEvents = document.querySelectorAll(".event");
+  allEvents.forEach((event) => {
+    event.style.minWidth = `${slideWidth}%`;
+  });
 }
 
+// Handle the "Previous" button click
 pastEventsPrevBtn.addEventListener("click", () => {
-  offset += 25;
+  const visibleSlides = getVisibleSlides();
+  const slideWidth = 100 / visibleSlides;
+  offset += slideWidth;
   if (offset > 0) {
-    offset = -(events.length - 1) * 25; // Loop back to the last slide
+    offset = -(events.length - visibleSlides) * slideWidth; // Loop back to the last slide
   }
   updateCarousel();
 });
 
+// Handle the "Next" button click
 pastEventsNextBtn.addEventListener("click", () => {
-  offset -= 25;
-  if (offset < -(events.length - 1) * 25) {
+  const visibleSlides = getVisibleSlides();
+  const slideWidth = 100 / visibleSlides;
+  offset -= slideWidth;
+  if (offset < -(events.length - visibleSlides) * slideWidth) {
     offset = 0; // Loop back to the first slide
   }
   updateCarousel();
 });
 
+// Update the carousel on window resize
+window.addEventListener("resize", () => {
+  offset = 0; // Reset offset when resizing
+  updateCarousel();
+});
+
+// Initial render and update
 renderEvents();
 updateCarousel();
+
 // ----------------Past Events Section----------------
 
 
