@@ -105,4 +105,7 @@ modeSwitch.addEventListener("click", () => {
     lightMode = localStorage.getItem('lightMode');
     lightMode !== "active" ? enableLightmode() : disableLightmode();
 });
+
+
+
 // ----------------------Toggle Button-----------------------
