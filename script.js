@@ -42,6 +42,49 @@ modeSwitch.addEventListener("click", () => {
     lightMode = localStorage.getItem('lightMode');
     lightMode !== "active" ? enableLightmode() : disableLightmode();
 });
+
+
+  var x=0;
+  var img1=document.getElementById('logo1');
+  var img2=document.getElementById('logo2');
+  var img3=document.getElementById('logo3');
+  var img4=document.getElementById('logo4');
+  var nav=document.getElementById('nav-img');
+  var foot=document.getElementById('foot');
+function changeImg(){
+
+  if(x==0){
+    img1.src='/image/Group 8.0.png';
+    img2.src='/image/Group 12.0.png';
+    img3.src='/image/Frame 88.0.png';
+    img4.src='/image/Group 11.0.png';
+    nav.src='/image/Group 3.0.png'
+    foot.src='/image/footer.png'
+
+
+        x=1;
+  }
+  else{
+    img1.src='/image/Group 8.png';
+    img2.src='/image/Group 12.png';
+    img3.src='/image/Frame 88.png';
+    img4.src='/image/Group 11.png';
+    nav.src='/image/Group 3.png';
+    foot.src='/image/footer.0.png'
+        x=0;
+  }
+}
+
+
+
+// function changeImg() {
+//   var img = document.getElementById('nav-img').src;
+//   if (img.indexOf('/images/Group 3.0.png')!=-1) {
+//      document.getElementById('nav-img').src = '/image/Group 3.png';
+//   } else {
+//      document.getElementById('nav-img').src = '/images/Group 3.0.png';
+//   }
+// }
 // ----------------------Toggle Button-----------------------
 
 
