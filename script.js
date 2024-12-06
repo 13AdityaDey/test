@@ -22,6 +22,29 @@ prevBtn.addEventListener("click", () => {
 });
 // ----------------Blogs Section----------------
 
+// ----------------------Toggle Button-----------------------
+let lightMode = localStorage.getItem('lightMode');
+const modeSwitch = document.querySelector('.mode-icon');
+
+const enableLightmode = () => {
+    document.body.classList.add('lightMode');
+    localStorage.setItem('lightMode','active');
+};
+
+const disableLightmode = () => {
+    document.body.classList.remove('lightMode');
+    localStorage.removeItem('lightMode');
+};
+
+if(lightMode === "active") enableLightmode();
+
+modeSwitch.addEventListener("click", () => {
+    lightMode = localStorage.getItem('lightMode');
+    lightMode !== "active" ? enableLightmode() : disableLightmode();
+});
+// ----------------------Toggle Button-----------------------
+
+
 // ----------------Past Events Section----------------
 const events = [
   { date: "12 Nov, 2024", title: "Gen AI Study Jam", image: "image/event-image.png" },

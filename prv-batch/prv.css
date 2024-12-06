@@ -3,25 +3,29 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
 }
 
 :root {
-    --body-color: rgb(39,37,37);
+    --bg-color: rgb(38, 37, 39);
+    --txt-color: rgb(255, 255, 255);
+    --footerBg: rgb(25, 20, 20);
+
+}
+
+.lightMode {
+    --bg-color: rgb(255, 255, 255);
+    --txt-color: rgb(39, 37, 37);
+    --footerBg: rgb(232, 232, 232);
+
 }
 
 body{
     min-height: 100vh;
-    background-color: var(--body-color);
-    font-family: gdgc font;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
 }
-@font-face {
-    font-family: gdgc font;
-    src: url(/fonts/Product\ Sans\ Regular.ttf);
-  }
-  
-
 
 .header{
     position: sticky;
@@ -77,12 +81,12 @@ nav li a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: whitesmoke;
+    color: rgb(255, 255, 255);
 }
 
 nav li button {
     background-color: #272525; 
-    color: white;
+    color: whitesmoke;
     margin: 8px 15px 0px 15px;
     height: 38px;
     width: 95px;
@@ -94,7 +98,8 @@ nav li button {
 }
 
 nav li button:hover {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: whitesmoke; 
+    opacity: 0.8;
     color: black; 
 }
 
@@ -140,7 +145,7 @@ nav li a:hover{
 }
 
 #menubar{
-    color: white;
+    color: var(--txt-color);
     font-size: 22px;
     margin-top: 3.5px;
     margin-right: 10px;
@@ -148,7 +153,7 @@ nav li a:hover{
 }
 
 #closeBtn{
-    color: white;
+    color: var(--txt-color);
     font-size: 24px;
 }
 
@@ -165,7 +170,7 @@ nav li a:hover{
     height: 55px;
     width: 135px;
     width: 135px;
-    background-color: rgb(65, 64, 64);
+    background-color:rgb(38, 37, 39);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -176,7 +181,7 @@ nav li a:hover{
 
 .batches .present a, 
 .batches .past a{
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -203,7 +208,7 @@ nav li a:hover{
 .footer{
     height: 384px;
     width: 97%;
-    background-color: rgb(30, 30, 30);
+    background-color:var(--footerBg);
     border-radius: 20px;
     margin: 150px auto 25px auto;
     display: flex;
@@ -222,8 +227,8 @@ nav li a:hover{
 }
 
 .footer-icons a{
-    background-color: black;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
     height: 60px;
     width: 60px;
     font-size: 23px;
@@ -477,7 +482,7 @@ nav li a:hover{
     height: 78px;
     width: max-content;
     font-size: 64px;
-    color: white;
+    color: var(--txt-color);
     line-height: 77px;
     font-weight: 500;
     user-select: none;
@@ -516,30 +521,30 @@ nav li a:hover{
     width: 353px;
     border-radius: 2%;
     background-color: #777676;
-    border: 2px solid #F0F0F0;
+    border: 2px solid var(--txt-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .blue-card{
-    background-color: #314A77;
-    border: 2px solid #0D99FF;
+    background-color: #314A77 !important;
+    border: 2px solid #0D99FF !important;
 }
 
 .red-card{
-    background-color: #74312c;
-    border: 2px solid #ea4335;
+    background-color: #74312c !important;
+    border: 2px solid #ea4335 !important;
 }
 
 .yellow-card{
-    background-color: #7B6019;
-    border: 2px solid #FBBC04;
+    background-color: #7B6019 !important;
+    border: 2px solid #FBBC04 !important;
 }
 
 .green-card{
-    background-color: #2C5837;
-    border: 2px solid #339E4F;
+    background-color: #2C5837 !important;
+    border: 2px solid #339E4F !important;
 }
 
 .card-img {
@@ -560,12 +565,13 @@ nav li a:hover{
     width: 305px;
     margin: 0px auto;
     margin-top: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .txt-name{
     font-size: 24px;
     font-weight: 500;
+    color: rgb(255, 255, 255);
     line-height: 29px;
 }
 
@@ -573,12 +579,13 @@ nav li a:hover{
     font-size: 20px;
     font-weight: 400;
     line-height: 26px;
+    color: rgb(255, 255, 255);
     opacity: 0.9;
 }
 
 .txt-logo a {
     font-size: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     opacity: 0.9;
 }
 
@@ -595,7 +602,7 @@ nav li a:hover{
     position: absolute;
     text-align: center;
     line-height: 50px;
-    color: white;
+    color: var(--txt-color);
     background: none;
     transform: translateY(-50%);
     transition: transform 0.1s linear;
