@@ -659,6 +659,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
   gap: 1rem;
   align-items: center;
   justify-content: center;
+  
 }
 
 .GDGC-Text {
