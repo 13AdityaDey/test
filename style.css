@@ -809,6 +809,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
 
 .blog-card {
   background-color: var(--footerBg);
+  /* background:#1E1E1E; */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
