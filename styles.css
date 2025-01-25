@@ -524,7 +524,8 @@ nav li a:hover{
     height: 465px;
     width: 353px;
     border-radius: 2%;
-    background-color: #777676;
+    /* background-color: #777676 ; */
+    background-color: rgb(119, 118, 118, 0.75) ;
     border: 2px solid var(--txt-color);
     display: flex;
     flex-direction: column;
