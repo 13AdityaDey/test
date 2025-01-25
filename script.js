@@ -56,7 +56,7 @@ prevBtn.addEventListener("click", () => {
 });
 // ----------------Blogs Section----------------
 
-// ----------------------Toggle Button-----------------------
+// ----------------------Toggle Button (Original)-----------------------
 
 let lightMode = localStorage.getItem('lightMode');
 const modeSwitch = document.querySelector('.mode-icon');
@@ -123,7 +123,7 @@ function changeImg() {
 //      document.getElementById('nav-img').src = '/images/Group 3.0.png';
 //   }
 // }
-// ----------------------Toggle Button-----------------------
+// ----------------------Toggle Button (Original)-----------------------
 
 
 // ----------------Past Events Section----------------
