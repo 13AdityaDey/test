@@ -124,8 +124,65 @@ function changeImg() {
 //   }
 // }
 // ----------------------Toggle Button (Original)-----------------------
+// ----------------------Toggle Button (Still under Consideration)-----------------------
+
+// let lightMode = localStorage.getItem('lightMode');
+// const modeSwitch = document.querySelector('.mode-icon');
+
+// const enableLightmode = () => {
+//     document.body.classList.add('lightMode');
+//     localStorage.setItem('lightMode', 'active');
+//     changeImg(); 
+// };
+
+// const disableLightmode = () => {
+//     document.body.classList.remove('lightMode');
+//     localStorage.removeItem('lightMode');
+//     changeImg();
+// };
+
+// // if (lightMode === "active") enableLightmode();
+
+// modeSwitch.addEventListener('click', () => {
+//   console.log("Mode switch clicked");
+//     lightMode = localStorage.getItem('lightMode');
+//     lightMode !== "active" ? enableLightmode() : disableLightmode();
+// });
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const lightMode = localStorage.getItem('lightMode');
+//   if (lightMode === 'active') {
+//     enableLightmode();
+//   }
+// })
 
 
+// // var x = 0;
+// // var img1 = document.getElementById('logo1');
+// // var img2 = document.getElementById('logo2');
+// // var img3 = document.getElementById('logo3');
+// // var img4 = document.getElementById('logo4');
+// // var nav = document.getElementById('nav-Img');
+// // var foot = document.getElementById('foot');
+
+// const images = {
+//   logo0: {light: './images/Group 3.0.png', dark: './images/nav-photo.png'},
+//   logo1: {light: './image/Group 8.0.png', dark: './image/Group 8.png' },
+//   logo2: {light: './image/Group 12.0.png', dark: './image/Group 12.png' },
+//   logo3: {light:'./image/Frame 88.0.png' , dark:'./image/Frame 88.png'},
+//   logo4: {light:'./image/Group 11.0.png' , dark:'./image/Group 11.png'},
+//   logo5: {light:'/image/Group 3.0.png' , dark:'/image/Group 3.png'},
+//   logo6:{light:'./image/footer.png' ,   dark:'./image/footer.0.png'}
+// };
+
+// function changeImg() {
+//   const isLightMode = localStorage.getItem('lightMode') === 'active';
+//   Object.keys(images).forEach((id) => {
+//     const img = document.getElementById(id);
+//     img.src = images[id][isLightMode ? 'light' : 'dark'];
+//   });
+// }
+// ----------------------Toggle Button (Still under Consideration)-----------------------
 // ----------------Past Events Section----------------
 
 
