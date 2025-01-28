@@ -147,6 +147,8 @@ nav li a:hover{
     width: 100%;
 }
 
+
+
 #menubar{
     color: var(--txt-color);
     font-size: 22px;
@@ -543,7 +545,7 @@ nav li a:hover{
     width: 353px;
     border-radius: 2%;
     /* background-color: #777676 ; */
-    background-color: rgb(119, 118, 118, 0.75) ;
+    background-color: rgb(119, 118, 118, 0.85) ;
     border: 2px solid var(--txt-color);
     display: flex;
     flex-direction: column;
@@ -551,22 +553,23 @@ nav li a:hover{
 }
 
 .blue-card{
-    background-color: #314A77 !important;
-    border: 2px solid #0D99FF !important;
+    background-color: rgb(66, 130, 242, 0.75) !important;
+    border: 2px solid #0d9aff69 !important;
+
 }
 
 .red-card{
-    background-color: #74312c !important;
-    border: 2px solid #ea4335 !important;
+    background-color: rgb(	232,67,54, 0.75) !important;
+    border: 2px solid #ea44358f !important;
 }
 
 .yellow-card{
-    background-color: #7B6019 !important;
+    background-color: rgb(	249,186,8,0.75) !important;
     border: 2px solid #FBBC04 !important;
 }
 
 .green-card{
-    background-color: #2C5837 !important;
+    background-color: rgb(	53	,166	,83,0.75) !important;
     border: 2px solid #339E4F !important;
 }
 
@@ -1152,7 +1155,7 @@ nav li a:hover{
     }
 }
 
-@media screen and (max-width: 330px){
+@media screen and (max-width: 320px){
     .right-arrow{
         right: 1%;
     }
