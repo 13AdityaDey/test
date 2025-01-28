@@ -1076,6 +1076,7 @@ nav li a:hover{
     .slider-container,
     .card-container {
         width: 90%;
+        overflow-y: hidden;
     }
     
     #wrapper .cards-wrapper {
@@ -1110,7 +1111,7 @@ nav li a:hover{
 @media screen and (max-width: 368px){
     .slider-container,
     .card-container {
-        width: 95%;
+        width: 90%;
     }
     
     #wrapper .cards-wrapper {
