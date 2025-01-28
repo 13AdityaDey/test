@@ -157,16 +157,17 @@ function changeImg() {
 // })
 
 
-// // var x = 0;
-// // var img1 = document.getElementById('logo1');
-// // var img2 = document.getElementById('logo2');
-// // var img3 = document.getElementById('logo3');
-// // var img4 = document.getElementById('logo4');
-// // var nav = document.getElementById('nav-Img');
-// // var foot = document.getElementById('foot');
+// var x = 0;
+// var img1 = document.getElementById('logo1');
+// var img2 = document.getElementById('logo2');
+// var img3 = document.getElementById('logo3');
+// var img4 = document.getElementById('logo4');
+// var nav = document.getElementById('nav-Img');
+// var foot = document.getElementById('foot');
+
 
 // const images = {
-//   logo0: {light: './images/Group 3.0.png', dark: './images/nav-photo.png'},
+//   logo0: {light: '/images/Group 3.0.png', dark: '/images/nav-photo.png'},
 //   logo1: {light: './image/Group 8.0.png', dark: './image/Group 8.png' },
 //   logo2: {light: './image/Group 12.0.png', dark: './image/Group 12.png' },
 //   logo3: {light:'./image/Frame 88.0.png' , dark:'./image/Frame 88.png'},
