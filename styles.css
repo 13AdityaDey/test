@@ -139,6 +139,7 @@ nav li a:hover{
     z-index: 99;
 }
 
+
 .sidebar li{
     width: 100%;
 }
@@ -146,6 +147,9 @@ nav li a:hover{
 .sidebar li a{
     width: 100%;
 }
+
+
+
 
 
 
@@ -1076,7 +1080,6 @@ nav li a:hover{
     .slider-container,
     .card-container {
         width: 90%;
-        overflow-y: hidden;
     }
     
     #wrapper .cards-wrapper {
