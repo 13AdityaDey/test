@@ -855,21 +855,6 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
   color: white;
 }
 
-.tag.ai {
-  background-color: #ff5722;
-}
-
-.tag.cloud {
-  background-color: #03a9f4;
-}
-
-.tag.ml {
-  background-color: #8bc34a;
-}
-
-.tag.design {
-  background-color: #ffc107;
-}
 
 /* swiper Controls */
 .swiper-controls {
@@ -933,6 +918,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
   align-items: center;
   justify-content: space-between;
   gap: 21px;
+  cursor: pointer;
 }
 
 .event img {
