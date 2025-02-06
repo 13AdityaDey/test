@@ -5,12 +5,14 @@ const closeIcon = sidebar.querySelector("#closeBtn");
 
 menubar.addEventListener("click", (event) => {
   // sidebar.style.display = 'flex';
+  event.preventDefault();
   event.stopPropagation();
   sidebar.classList.add("active");
 });
 
 closeIcon.addEventListener("click", (event) => {
   // sidebar.style.display = 'none';
+  event.preventDefault();
   event.stopPropagation();
   sidebar.classList.remove("active");
 });
@@ -56,6 +58,7 @@ prevBtn.addEventListener("click", () => {
 
 // ----------------------Toggle Button (Original)-----------------------
 
+
 let lightMode = localStorage.getItem("lightMode");
 const modeSwitch = document.querySelector(".mode-icon");
 
@@ -67,47 +70,48 @@ const enableLightmode = () => {
 
 const disableLightmode = () => {
   document.body.classList.remove("lightMode");
-  localStorage.removeItem("lightMode");
+  localStorage.setItem("lightMode", "inactive");
   changeImg();
 };
 
-// if (lightMode === "active") enableLightmode();
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("lightMode") === "active") {
+    enableLightmode();
+  } else {
+    disableLightmode();
+  }
+});
 
 modeSwitch.addEventListener("click", () => {
-  console.log("Mode switch clicked");
   lightMode = localStorage.getItem("lightMode");
   lightMode !== "active" ? enableLightmode() : disableLightmode();
 });
 
-window.addEventListener("unload", () => {
-  disableLightmode();
-});
-
-var x = 0;
-var img1 = document.getElementById("logo1");
-var img2 = document.getElementById("logo2");
-var img3 = document.getElementById("logo3");
-var img4 = document.getElementById("logo4");
-var nav = document.getElementById("nav-Img");
-var foot = document.getElementById("foot");
-
 function changeImg() {
+  const img1 = document.getElementById("logo1");
+  const img2 = document.getElementById("logo2");
+  const img3 = document.getElementById("logo3");
+  const img4 = document.getElementById("logo4");
+  const nav = document.getElementById("nav-Img");
+  const foot = document.getElementById("foot");
+
   if (localStorage.getItem("lightMode") === "active") {
-    img1.src = "/image/Group 8.0.png";
-    img2.src = "/image/Group 12.0.png";
-    img3.src = "/image/Frame 88.0.png";
-    img4.src = "/image/Group 11.0.png";
-    nav.src = "/image/Group 3.0.png";
-    foot.src = "/image/footer.png";
+    if (img1) img1.src = "/image/Group 8.0.png";
+    if (img2) img2.src = "/image/Group 12.0.png";
+    if (img3) img3.src = "/image/Frame 88.0.png";
+    if (img4) img4.src = "/image/Group 11.0.png";
+    if (nav) nav.src = "/image/Group 3.0.png";
+    if (foot) foot.src = "/image/footer.png";
   } else {
-    img1.src = "/image/Group 8.png";
-    img2.src = "/image/Group 12.png";
-    img3.src = "/image/Frame 88.png";
-    img4.src = "/image/Group 11.png";
-    nav.src = "/image/Group 3.png";
-    foot.src = "/image/footer.0.png";
+    if (img1) img1.src = "/image/Group 8.png";
+    if (img2) img2.src = "/image/Group 12.png";
+    if (img3) img3.src = "/image/Frame 88.png";
+    if (img4) img4.src = "/image/Group 11.png";
+    if (nav) nav.src = "/image/Group 3.png";
+    if (foot) foot.src = "/image/footer.0.png";
   }
 }
+
 
 // function changeImg() {
 //   var img = document.getElementById('nav-img').src;

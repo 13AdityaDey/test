@@ -13,6 +13,10 @@
     margin-right: 10vw;
 } */
 
+html{
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-color: rgb(38, 37, 39);
   --txt-color: rgb(255, 255, 255);
@@ -212,6 +216,7 @@ nav li a:hover {
 /* ----------------------------------------------Hero Section------------------------------------------------------ */
 
 .hero-container {
+  scroll-margin-top: 5rem;
   position: relative;
   top: -3rem;
   /* overflow-x: hidden;/ */
@@ -629,6 +634,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
 
 /* ----------------------------------------------About Section------------------------------------------------------ */
 .about-container {
+  scroll-margin-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -758,6 +764,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
 /* -------------------------------------------------Blogs Section------------------------------- */
 
 .blog-container {
+  scroll-margin-top: 20rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -885,6 +892,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
 /* -------------------------------------------------Past Events Section------------------------------- */
 
 .past-events {
+  scroll-margin-top: 10rem;
   color: var(--txt-color);
   text-align: center;
   padding: 50px 20px;
@@ -970,6 +978,7 @@ input[type="checkbox"]:checked~.toggle-btn .toggle::before {
 /* ----------------------------------------------------FAQ Section-------------------------------------------------- */
 
 .faq {
+  scroll-margin-top: 7rem;
   color: var(--txt-color);
   display: flex;
   gap: 1rem;
