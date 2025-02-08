@@ -111,7 +111,7 @@ function changeImg() {
     if (foot) foot.src = "/image/footer.0.png";
   }
 }
-
+// -------------------------------------------------------------------------------
 
 // function changeImg() {
 //   var img = document.getElementById('nav-img').src;
