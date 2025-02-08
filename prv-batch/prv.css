@@ -177,7 +177,9 @@ nav li a:hover{
     height: 55px;
     width: 135px;
     width: 135px;
-    background-color:rgb(38, 37, 39);
+    /* background-color:rgb(38, 37, 39); */
+    background-color:var(--bg-color);
+
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -188,13 +190,23 @@ nav li a:hover{
 
 .batches .present a, 
 .batches .past a{
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: var(--txt-color);
+
     text-decoration: none;
 }
 
 .batches .present:hover, 
 .batches .past:hover{
     background-color: rgb(85, 84, 84);
+}
+
+.batches .present:hover a{
+    color: white;
+}
+
+.batches .past:hover a{
+    color: white;
 }
 
 .batches .present::after,
