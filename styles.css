@@ -242,6 +242,14 @@ nav li a:hover{
     color: white;
 }
 
+.batches .present:hover a{
+    color: white;
+}
+
+.batches .past:hover a{
+    color: white;
+}
+
 .batches .present::after,
 .batches .past::after{
     content: "";
