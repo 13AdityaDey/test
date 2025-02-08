@@ -101,8 +101,49 @@ const disableLightmode = () => {
 
 if(lightMode === "active") enableLightmode();
 
-modeSwitch.addEventListener("click", () => {
-    lightMode = localStorage.getItem('lightMode');
-    lightMode !== "active" ? enableLightmode() : disableLightmode();
-});
+// modeSwitch.addEventListener("click", () => {
+//     lightMode = localStorage.getItem('lightMode');
+//     lightMode !== "active" ? enableLightmode() : disableLightmode();
+// });
+// const modeSwitch = document.querySelector('.mode-icon');
+if (modeSwitch) {
+    modeSwitch.addEventListener("click", () => {
+        lightMode = localStorage.getItem('lightMode');
+        lightMode !== "active" ? enableLightmode() : disableLightmode();
+    });
+}
+console.log("Current Mode:", localStorage.getItem('lightMode'));
+
+
 // ----------------------Toggle Button-----------------------
+
+// let lightMode = localStorage.getItem('lightMode');
+// const modeSwitch = document.querySelector('.mode-icon');
+
+// const enableLightmode = () => {
+//     document.body.classList.add('lightMode');
+//     localStorage.setItem('lightMode', 'active');
+//     console.log("Light mode enabled");  // Debugging log
+// };
+
+// const disableLightmode = () => {
+//     document.body.classList.remove('lightMode');
+//     localStorage.removeItem('lightMode');
+//     console.log("Light mode disabled");  // Debugging log
+// };
+
+// // Ensure the correct mode is applied on page load
+// if (lightMode === "active") {
+//     enableLightmode();
+// }
+
+// // Check if mode switch exists before adding event listener
+// if (modeSwitch) {
+//     modeSwitch.addEventListener("click", () => {
+//         lightMode = localStorage.getItem('lightMode');
+//         lightMode !== "active" ? enableLightmode() : disableLightmode();
+//     });
+// } else {
+//     console.log("Mode switch button not found!");
+// }
+
