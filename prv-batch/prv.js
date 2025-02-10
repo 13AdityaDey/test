@@ -1,24 +1,56 @@
 // NAVIGATION BAR //
-const menubar = document.querySelector('#menubar');
-const sidebar = document.querySelector('.sidebar');
-const closeIcon = sidebar.querySelector('#closeBtn');
+// const menubar = document.querySelector('#menubar');
+// const sidebar = document.querySelector('.sidebar');
+// const closeIcon = sidebar.querySelector('#closeBtn');
 
-menubar.addEventListener('click', () => {
-    sidebar.style.display = 'flex';
-});
+// menubar.addEventListener('click', () => {
+//     sidebar.style.display = 'flex';
+// });
 
-closeIcon.addEventListener('click', () => {
-    sidebar.style.display = 'none';
-});
+// closeIcon.addEventListener('click', () => {
+//     sidebar.style.display = 'none';
+// });
 
-const navLinks = document.querySelectorAll('nav li a');
+// const navLinks = document.querySelectorAll('nav li a');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        navLinks.forEach(nav => nav.classList.remove('active')); 
-        this.classList.add('active'); 
-    });
-});
+// navLinks.forEach(link => {
+//     link.addEventListener('click', function () {
+//         navLinks.forEach(nav => nav.classList.remove('active')); 
+//         this.classList.add('active'); 
+//     });
+// });
+
+
+// const menubar = document.querySelector("#menubar");
+// const sidebar = document.querySelector(".sidebar");
+// const closeIcon = sidebar.querySelector("#closeBtn");
+
+// menubar.addEventListener("click", (event) => {
+//   // sidebar.style.display = 'flex';
+//   event.stopPropagation();
+//   sidebar.classList.add("active");
+// });
+
+// closeIcon.addEventListener("click", (event) => {
+//   // sidebar.style.display = 'none';
+//   event.stopPropagation();
+//   sidebar.classList.remove("active");
+// });
+
+// document.addEventListener("click", (event) => {
+//   if (!sidebar.contains(event.target) && !menubar.contains(event.target)) {
+//     sidebar.classList.remove("active");
+//   }
+// });
+
+// const navLinks = document.querySelectorAll("nav li a");
+
+// navLinks.forEach((link) => {
+//   link.addEventListener("click", function () {
+//     navLinks.forEach((nav) => nav.classList.remove("active"));
+//     this.classList.add("active");
+//   });
+// });
 
 // SLIDER //
 const sliders = document.querySelectorAll(".slider-container");

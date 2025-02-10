@@ -30,7 +30,7 @@ body{
     background-color: var(--bg-color);
     color: var(--txt-color);
 }
-
+/* 
 .header{
     position: sticky;
     top: 3%;
@@ -162,7 +162,7 @@ nav li a:hover{
 #closeBtn{
     color: var(--txt-color);
     font-size: 24px;
-}
+} */
 
 .batches{
     margin-top: 150px;
@@ -223,7 +223,7 @@ nav li a:hover{
     z-index: -9;
     border-radius: 10px;
 }
-
+/* 
 .footer{
     height: 384px;
     width: 97%;
@@ -265,7 +265,7 @@ nav li a:hover{
 
 .footer-pic {
     margin: 2%;
-}
+} */
 
 @media(max-width: 1250px){
     nav li a{
@@ -318,7 +318,7 @@ nav li a:hover{
 }
 
 @media(max-width: 780px){
-    .hideOnMobile{
+    /* .hideOnMobile{
         display: none;
     }
 
@@ -345,7 +345,7 @@ nav li a:hover{
 
     .footer-pic img{
         scale: 0.7;
-    }
+    } */
 
     .batches{
         margin-top: 120px;
@@ -357,7 +357,7 @@ nav li a:hover{
     .batches .past{
         height: 50px;
     }
-
+/* 
     nav{
         height: 40px;
     }
@@ -372,7 +372,7 @@ nav li a:hover{
 
     #menubar{
         display: block;
-    }
+    } */
 }
 
 @media(max-width: 580px){
@@ -387,7 +387,7 @@ nav li a:hover{
         height: 40px;
         width: 100px;
     }
-
+/* 
     .footer{
         height: 120px;
         width: 95%;
@@ -413,17 +413,17 @@ nav li a:hover{
 
     .footer-pic img{
         scale: 0.4;
-    }
+    } */
 }
 
-@media(max-width: 465px){
+/* @media(max-width: 465px){
     .footer{
         margin-top: 120px;
     }
-}
+} */
 
 @media(max-width: 450px){
-    .sidebar{
+    /* .sidebar{
         width: 75%;
     }
 
@@ -433,7 +433,7 @@ nav li a:hover{
 
     .nav-img img{
         width: 200px;
-    }
+    } */
 
     .batches{
         font-size: 12px;
@@ -445,7 +445,7 @@ nav li a:hover{
         height: 35px;
         width: 80px;
     }
-
+/* 
     .footer{
         flex-direction:column-reverse;
         justify-content: space-between;
@@ -462,14 +462,14 @@ nav li a:hover{
     .footer-icons{
         margin-top: -40px;
         margin-left: 30px;
-    }
+    } */
 }
 
-@media(max-width: 368px){
+/* @media(max-width: 368px){
     .footer{
         margin-top: 40px;
     }
-}
+} */
 
 /* SLIDERS */
 .outer-wrapper{

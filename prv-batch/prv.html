@@ -7,10 +7,11 @@
     <title>GDGC PRV TEAM MEMBERS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="prv.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-
+<!-- 
     <div class="header">
         <nav>
             <ul>
@@ -40,7 +41,51 @@
                 <li><a href="#">Join Us</a></li>
             </ul>
         </nav>
-    </div>
+    </div> -->
+
+    
+    <div class="header">
+        <nav>
+          <ul>
+            <div class="nav-img">
+              <img id="nav-Img" src="/images/nav-photo.png" alt="GDGC" />
+            </div>
+            <li class="hideOnMobile">
+              <a href="/index.html" class="active">Home</a>
+            </li>
+            <li class="hideOnMobile"><a href="/index.html">About</a></li>
+            <li class="hideOnMobile"><a href="./indexx.html">Team</a></li>
+            <li class="hideOnMobile"><a href="/index.html">Events</a></li>
+            <li class="hideOnMobile"><a href="/index.html">FAQ</a></li>
+            <li class="hideOnMobile"><a href="/index.html">Blog</a></li>
+            <li class="hideOnMobile">
+              <button id="nav-btn">
+                <a
+                  href="https://gdg.community.dev/gdg-on-campus-meghnad-saha-institute-of-technology-kolkata-india/"
+                  >Join us</a
+                >
+              </button>
+            </li>
+            <li>
+              <a href="#" id="menubar"><i class="fa-solid fa-bars"></i></a>
+            </li>
+          </ul>
+  
+          <ul class="sidebar">
+            <li>
+              <a href="#" id="closeBtn"><i class="fa-solid fa-x"></i></a>
+            </li>
+            <li><a href="/index.html" class="nav-btn">Home</a></li>
+            <li><a href="/index.html" class="nav-btn">About</a></li>
+            <li><a href="/indexx.html" class="nav-btn">Team</a></li>
+            <li><a href="/index.html" class="nav-btn">Events</a></li>
+            <li><a href="/index.html" class="nav-btn">FAQ</a></li>
+            <li><a href="/index.html" class="nav-btn">Blog</a></li>
+            <li><a href="https://gdg.community.dev/gdg-on-campus-meghnad-saha-institute-of-technology-kolkata-india/" class="nav-btn">Join Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
 
     <div class="batches">
         <div class="present">
@@ -491,7 +536,7 @@
         <!-- <a href="#"><i class="fa-brands fa-youtube"></i></a> -->
         </div>
         <div class="footer-pic">
-            <img src="../images/footer-pic.png" alt="gdgc">
+            <img id="foot" src="../images/footer-pic.png" alt="gdgc">
         </div>
     </div>
 
@@ -538,29 +583,64 @@ function changeImg() {
 //   const img2 = document.getElementById("logo2");
 //   const img3 = document.getElementById("logo3");
 //   const img4 = document.getElementById("logo4");
-  const nav = document.querySelector('.nav-Img');
-//   const foot = document.getElementById("foot");
+  const nav = document.getElementById('nav-Img');
+  const foot = document.getElementById("foot");
 
   if (localStorage.getItem("lightMode") === "active") {
 //     if (img1) img1.src = "/image/Group 8.0.png";
 //     if (img2) img2.src = "/image/Group 12.0.png";
 //     if (img3) img3.src = "/image/Frame 88.0.png";
 //     if (img4) img4.src = "/image/Group 11.0.png";
-    if (nav) nav.src = ""
-//     if (foot) foot.src = "/image/footer.png";
-//   } else {
+    if (nav) nav.src = "/image/Group 3.0.png";
+    if (foot) foot.src = "/image/footer.png";
+
+  } else {
 //     if (img1) img1.src = "/image/Group 8.png";
 //     if (img2) img2.src = "/image/Group 12.png";
 //     if (img3) img3.src = "/image/Frame 88.png";
 //     if (img4) img4.src = "/image/Group 11.png";
     if (nav) nav.src = "/image/Group 3.png";
-//     if (foot) foot.src = "/image/footer.0.png";
+    if (foot) foot.src = "/image/footer.0.png";
+
   }
 }
 </script>
 
     <script src="prv.js"></script>
+    <!-- <script src="/script.js"></script> -->
 
+    <script>
+        const menubar = document.querySelector("#menubar");
+const sidebar = document.querySelector(".sidebar");
+const closeIcon = sidebar.querySelector("#closeBtn");
+
+menubar.addEventListener("click", (event) => {
+  // sidebar.style.display = 'flex';
+  event.stopPropagation();
+  sidebar.classList.add("active");
+});
+
+closeIcon.addEventListener("click", (event) => {
+  // sidebar.style.display = 'none';
+  event.stopPropagation();
+  sidebar.classList.remove("active");
+});
+
+document.addEventListener("click", (event) => {
+  if (!sidebar.contains(event.target) && !menubar.contains(event.target)) {
+    sidebar.classList.remove("active");
+  }
+});
+
+const navLinks = document.querySelectorAll("nav li a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((nav) => nav.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+    </script>
 </body>
 
 </html>
