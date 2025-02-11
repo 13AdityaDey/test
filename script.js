@@ -325,3 +325,50 @@ window.onload = function () {
     document.getElementById("main-content").style.display = "block";
   }, 2000); // Adjust the delay as needed
 };
+
+
+// ---------------------------------------scroll animation---------------------------------------------
+
+function revealOnScroll() {
+  let upImages = document.querySelectorAll('.Up-img img');
+  let downImages = document.querySelectorAll('.Down img');
+
+  upImages.forEach((img, index) => {
+    let imgPosition = img.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+
+    if (imgPosition < windowHeight - 100) {
+      setTimeout(() => {
+        img.classList.add("show");
+        img.classList.remove("hide");
+      }, index * 300); // Up images appear slower (300ms delay)
+    } else if (imgPosition > windowHeight) {
+      img.classList.remove("show");
+      img.classList.add("hide");
+    }
+  });
+
+  downImages.forEach((img, index) => {
+    let imgPosition = img.getBoundingClientRect().top;
+    let windowHeight = window.innerHeight;
+
+    if (imgPosition < windowHeight - 100) {
+      setTimeout(() => {
+        img.classList.add("show");
+        img.classList.remove("hide");
+      }, index * 150); // Down images appear faster (150ms delay)
+    } else if (imgPosition > windowHeight) {
+      img.classList.remove("show");
+      img.classList.add("hide");
+    }
+  });
+}
+
+// Run on scroll
+window.addEventListener("scroll", revealOnScroll);
+
+// Run once on load in case images are already in view
+document.addEventListener("DOMContentLoaded", revealOnScroll);
+
+
+
