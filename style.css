@@ -91,6 +91,16 @@ button:hover {
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
 }
+.faq-left{
+  animation: appear 10s linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+.question{
+  animation: appear 10s linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
 
 
 @keyframes appear1{
