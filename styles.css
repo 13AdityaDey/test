@@ -68,8 +68,9 @@ body{
   }
   
   
+  
 
-.slider {
+/* .slider {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -78,7 +79,7 @@ body{
 .slide-track {
     display: flex;
     gap: 10px;
-    width: calc(250px * 14); /* Adjust based on the number of slides */
+    width: calc(250px * 14);
     animation: scroll 10s linear infinite;
 }
 
@@ -86,10 +87,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 250px; /* Keep the original card width */
-    height: 100px; /* Keep original height */
-    background: white; /* Optional for styling */
-    border-radius: 10px; /* Smooth edges */
+    min-width: 250px; 
+    height: 100px; 
+    background: white; 
+    border-radius: 10px;
 }
 
 .slide img {
@@ -98,11 +99,10 @@ body{
     object-fit: cover;
 }
 
-/* Keyframes for Infinite Scrolling */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 7)); } /* Moves left smoothly */
-}
+    100% { transform: translateX(calc(-250px * 7)); }
+} */
 
 
 /* -------------------------------------------------------animation--------------------------------- */
