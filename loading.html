@@ -4,14 +4,13 @@
     <title>Loading Spinner</title>
     <link rel="stylesheet" href="loading.css">
     <script>
-        
         sessionStorage.setItem('loadingShown', 'true');
-    
         
         setTimeout(() => {
-          window.location.href = 'index.html';
-        }, 0); 
-      </script>
+            window.location.href = 'index.html';
+        }, 2000); // Show loading screen for 2 seconds
+    </script>
+    
 </head>
 <body>
     <div class="container" id="loading-screen">
