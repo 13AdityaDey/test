@@ -208,6 +208,12 @@ const events = [
     title: "Workshop Intro to Figma",
     image: "image/events/introToFigma.jpeg",
   },
+  {
+    date: "Feb 12, 2025",
+    title: "Build your first AI Agent",
+    image: "image/events/build with AI.jpeg",
+  },
+
 ];
 
 const carouselInner = document.querySelector(".carousel-inner");
@@ -370,5 +376,15 @@ window.addEventListener("scroll", revealOnScroll);
 // Run once on load in case images are already in view
 document.addEventListener("DOMContentLoaded", revealOnScroll);
 
+
+
+
+
+// window.onload = function () {
+//   if (!sessionStorage.getItem("loadingShown")) {
+//     sessionStorage.setItem("loadingShown", "true");
+//     window.location.href = "Loading.html";
+//   }
+// };
 
 
